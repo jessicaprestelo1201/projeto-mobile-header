@@ -1,9 +1,11 @@
-// Header.jsx
 import styles from './Header.module.css';
 
-const Header = () => {
+const Header = ({ page }) => {
+  // Define a classe do header com base na propriedade `page`
+  const headerClass = `${styles.header} ${styles[`header-${page}`]}`;
+
   return (
-    <header className={styles.header}>
+    <header className={headerClass}>
       <nav>
         <span className={styles.navTitulo}>Clean.</span>
         <span className={styles.navText}>Home</span>
@@ -13,7 +15,6 @@ const Header = () => {
         <span className={styles.navsign}>Sign In</span>
         <span className={styles.button}>Sign Up</span>
       </nav>
-
     </header>
   );
 };

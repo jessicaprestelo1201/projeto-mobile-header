@@ -1,41 +1,40 @@
-/* Header.module.css */
 .header {
-    background-color: #F05080; /* Define o fundo como rosa */
-    padding: 50px; /* Adiciona espaço interno */
-    display: flex; /* Usa flexbox para organizar os itens */
-    align-items: center; /* Alinha os itens verticalmente no centro */
+    background-color: #F05080; 
+    padding: 50px; 
+    display: flex; 
+    align-items: center; 
   }
   
 .navTitulo {
-    font-family: Caveat; /* Fonte padrão */
-    font-size: 20px; /* Tamanho da fonte */
-    color: #ffffff; /* Cor do texto */
-    margin-right: 150px; /* Espaço entre o título e os itens de texto */
+    font-family: Caveat; 
+    font-size: 20px; 
+    color: #ffffff; 
+    margin-right: 150px; 
   }
 
 .button {
-    background-color: #ffffff; /* Define o fundo como azul */
-    padding: 10px 20px; /* Adiciona espaço interno */
-    border-radius: 5px; /* Adiciona bordas redondas */
-    color: #F05080; /* Cor do texto */
-    font-family: Inter, sans-serif; /* Fonte padrão */
-    font-size: 16px; /* Tamanho da fonte */
-    cursor: pointer; /* Adiciona um cursor de ponteiro */
+    background-color: #ffffff; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    color: #F05080; 
+    font-family: Inter, sans-serif; 
+    font-size: 16px; 
+    cursor: pointer; 
   }
 
   .navsign {
-    margin-right: 30px; /* Espaço entre o título e os itens de texto */
-    color: #ffffff; /* Cor do texto */
+    margin-right: 30px; 
+    color: #ffffff; 
 
   }
   
   .navText {
-    font-family: Inter, sans-serif; /* Fonte padrão */
-    font-size: 16px; /* Tamanho da fonte */
-    color: #ffffff; /* Cor do texto */
-    margin-right: 250px; /* Espaço entre os itens de texto */
+    font-family: Inter, sans-serif; 
+    font-size: 16px; 
+    color: #ffffff; 
+    margin-right: 250px; 
   }
   
   .navText:last-child {
-    margin-right: 80px; /* Remove o espaço à direita do último item */
+    margin-right: 80px; 
   }
