@@ -44,8 +44,8 @@ Ex: <Header page="home" />
 
 /* Estilos dos elementos internos */
 .navTitulo {
-  font-family: Caveat;
-  font-size: 20px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 22px;
   color: #ffffff;
   margin-right: 150px;
 }
