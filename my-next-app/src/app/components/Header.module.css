@@ -1,46 +1,64 @@
+/* Estilos gerais do header */
 .header {
   padding: 50px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   background-color: #F05080;
-  margin: 30px 90px 90px 90px; 
+  margin: 30px 90px;
+  transition: background-color 0.3s ease-in-out;
+  animation: fadeIn 1s ease-in-out;
 }
 
+/* Animação de fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-/* Forma de alterar para cada página.
-Ex: */
+/* Responsividade */
+@media (max-width: 1024px) {
+  .header {
+    margin: 20px 40px;
+  }
+  .navText {
+    margin-right: 50px;
+  }
+}
 
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+  .navText, .navsign, .button {
+    margin: 10px 0;
+  }
+}
 
-/* Página Home */
+/* Cores específicas por página */
 .header-home {
   background-color: #ffffff;
 }
 
-/* Página Produtos */
 .header-produtos {
-  background-color: #33ff57; /* Verde */
+  background-color: #33ff57;
 }
 
-
-/* Página Blog */
 .header-blog {
-  background-color: #3357ff; /* Azul */
+  background-color: #3357ff;
 }
 
-
-/* Página Contato */
 .header-contato {
-  background-color: #ff33a1; /* Rosa */
+  background-color: #ff33a1;
 }
-
-
-/* Se você usar o Header com a propriedade page, ele terá a cor específica daquela página:
-Ex: <Header page="home" />
-<Header page="produtos" />
-<Header page="blog" />
-<Header page="contato" />
-*/
-
 
 /* Estilos dos elementos internos */
 .navTitulo {
@@ -48,8 +66,17 @@ Ex: <Header page="home" />
   font-size: 22px;
   color: #ffffff;
   margin-right: 150px;
+  animation: bounce 1s infinite alternate;
 }
 
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-5px);
+  }
+}
 
 .button {
   background-color: #ffffff;
@@ -59,23 +86,45 @@ Ex: <Header page="home" />
   font-family: Inter, sans-serif;
   font-size: 16px;
   cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s;
 }
 
+.button:hover {
+  background-color: #f7b2c0;
+  transform: scale(1.1);
+}
 
 .navsign {
   margin-right: 30px;
   color: #ffffff;
 }
 
-
 .navText {
   font-family: Inter, sans-serif;
   font-size: 16px;
   color: #ffffff;
   margin-right: 250px;
+  transition: color 0.3s ease-in-out;
+  position: relative;
 }
 
+.navText::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #ffffff;
+  transition: width 0.3s ease-in-out;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
-.navText:last-child {
-  margin-right: 80px;
+.navText:hover::after {
+  width: 100%;
+}
+
+.navText:hover {
+  color: #f7b2c0;
 }
